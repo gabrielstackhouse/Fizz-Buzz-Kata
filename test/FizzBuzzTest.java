@@ -5,7 +5,7 @@ import org.junit.Test;
 public class FizzBuzzTest {
 
     // Instance variables
-    FizzBuzz fizzbuzz;
+    private FizzBuzz fizzbuzz;
 
     /**
      * Runs before each test, creating an empty Fizz Buzz game
