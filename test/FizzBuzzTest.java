@@ -31,9 +31,13 @@ public class FizzBuzzTest {
      */
     @Test
     public void addSubstitutionTwoParameters() {
+
+        // Add substitutions
         fizzbuzz.addSubstitution(2, "Expelliarmus");
         fizzbuzz.addSubstitution(3, "Avada Kedavra");
         fizzbuzz.addSubstitution(1, "Confundus");
+
+        // Test additions
         assertEquals("Expelliarmus", fizzbuzz.getSubstitutionPhrase(2));
         assertEquals("Avada Kedavra", fizzbuzz.getSubstitutionPhrase(3));
         assertEquals("Confundus", fizzbuzz.getSubstitutionPhrase(1));
@@ -122,8 +126,12 @@ public class FizzBuzzTest {
      */
     @Test
     public void playCustomWithNormalRules() {
+
+        // Define normal Fizz Buzz rules into our custom game
         fizzbuzz.addSubstitution(3, "fizz");
         fizzbuzz.addSubstitution(5, "buzz");
+
+        // Test that Fizz Buzz Custom now plays exactly like Classic
         assertEquals("fizz", fizzbuzz.playCustom(3));
         assertEquals("buzz", fizzbuzz.playCustom(5));
         assertEquals("fizz buzz", fizzbuzz.playCustom(15));

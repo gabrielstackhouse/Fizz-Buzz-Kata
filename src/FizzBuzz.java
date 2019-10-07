@@ -10,8 +10,7 @@ import java.util.*;
 public class FizzBuzz {
 
     // Instance variables
-    private ArrayList<Substitution> substitutions;  // User-defined
-                                                    // substitutions
+    private ArrayList<Substitution> substitutions;  // User-defined rules
 
     /**
      * Constructor with no parameters
@@ -93,8 +92,9 @@ public class FizzBuzz {
 
     /**
      *
-     * @param num
-     * @return
+     * @param num - The number to play
+     * @return - The correct number or phrase, as defined by the Substitutions
+     *           added by the user.
      */
     public String playCustom(int num) {
 
@@ -119,10 +119,12 @@ public class FizzBuzz {
             }
         }
 
-        // If string is empty, no multiples were found, so just return number
+        // If string is still empty, no multiples were found, so return number
         if(result.isEmpty()) {
             return Integer.toString(num);
         }
+
+        // Return result
         return result;
     }
 
