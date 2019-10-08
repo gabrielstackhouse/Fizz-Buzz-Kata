@@ -139,6 +139,24 @@ public class FizzBuzzTest {
     }
 
     /**
+     * Test that inserting rules out of order does not affect how they are
+     * applied. They will always be applied in ascending order.
+     */
+    @Test
+    public void playCustomWithNormalRulesReversed() {
+
+        // Define normal Fizz Buzz rules into our custom game
+        fizzbuzz.addSubstitution(5, "buzz");
+        fizzbuzz.addSubstitution(3, "fizz");
+
+        // Test that Fizz Buzz Custom now plays exactly like Classic
+        assertEquals("fizz", fizzbuzz.playCustom(3));
+        assertEquals("buzz", fizzbuzz.playCustom(5));
+        assertEquals("fizz buzz", fizzbuzz.playCustom(15));
+        assertEquals("7", fizzbuzz.playCustom(7));
+    }
+
+    /**
      * Test Fizz Buzz Pop with multiples of seven
      */
     @Test
